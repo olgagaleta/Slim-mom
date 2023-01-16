@@ -1,3 +1,10 @@
+import { GlobalStyle } from '../style/GlobalStyle';
+
 export const App = () => {
-  return <div></div>;
+  return (
+    <>
+      {/* ці стилі застовуються до всієї апки та скинуть наші налаштування */}
+      <GlobalStyle />
+    </>
+  );
 };
