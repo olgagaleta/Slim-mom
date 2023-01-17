@@ -7,9 +7,10 @@ export const BurgerOverlay = styled.div`
   z-index: 1000;
   min-width: 320px;
   width: 100%;
-  min-height: 100vh;
+  min-height: 130vh;
   background: #264061;
   text-align: center;
+  overflow:hidden;
 `;
 
 export const BurgerList = styled.ul``;
