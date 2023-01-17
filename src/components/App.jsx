@@ -1,5 +1,9 @@
+import { Routes, Route } from 'react-router-dom';
+import { lazy } from 'react';
 import { GlobalStyle } from '../style/GlobalStyle';
 import { PageContainer } from './PageContainer/PageContainer';
+
+const Calculator = lazy(() => import('../pages/CalculatorPage'));
 
 export const App = () => {
   return (
@@ -9,6 +13,13 @@ export const App = () => {
 
       <PageContainer>
         {/* тут будем рендерити всю розмітку в головному контейнері */}
+        <Routes>
+          <Route
+            path='calculator'
+            element={<Calculator/>}
+          />
+        </Routes>
+        
       </PageContainer>
     </>
   );
