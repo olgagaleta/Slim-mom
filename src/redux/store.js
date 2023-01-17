@@ -1,4 +1,6 @@
+import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
+import { PersistGate } from 'redux-persist/integration/react';
 import {
   persistStore,
   persistReducer,
@@ -11,26 +13,46 @@ import {
 } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 
-import authReducer from './auth/auth-slice';
+import { authReduser } from './auth/slice.auth';
+import { slimDaddyReduser } from './slimDaddy/slice.slimDaddy';
 
-const authPersistConfig = {
+const persistConfigAuth = {
   key: 'auth',
   storage,
-  whitelist: ['token'],
+  whitelist: ['refreshToken', 'isAuth', 'user', 'sid'],
 };
 
-export const store = configureStore({
-  reducer: {
-     auth: persistReducer(authPersistConfig, authReducer),
-  },
+const persistedAuth = persistReducer(persistConfigAuth, authReduser);
 
-  middleware(getDefaultMiddleware) {
-    return getDefaultMiddleware({
+const persistSlimDaddy = {
+  key: 'slimDaddy',
+  storage,
+};
+
+const persistedSlimDaddy = persistReducer(persistSlimDaddy, slimDaddyReduser);
+
+const store = configureStore({
+  reducer: {
+    auth: persistedAuth,
+    slimDaddy: persistedSlimDaddy,
+  },
+  middleware: getDefaultMiddleware =>
+    getDefaultMiddleware({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    });
-  },
+    }),
+  devTools: true,
 });
 
-export const persistor = persistStore(store);
+const persistor = persistStore(store);
+
+export default function ReduxProvider({ children }) {
+  return (
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistor}>
+        {children}
+      </PersistGate>
+    </Provider>
+  );
+}
