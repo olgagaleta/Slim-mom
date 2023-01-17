@@ -8,8 +8,8 @@ import { registerSchema } from 'services/validation/registerSchema';
 import {
   ContainerBtn,
   RegisterForm,
-  RegisterInput,
   RegisterLabel,
+  RegisterInput,
   RegisterTitle,
 } from './RegistrationForm.styled';
 import { toast } from 'react-toastify';

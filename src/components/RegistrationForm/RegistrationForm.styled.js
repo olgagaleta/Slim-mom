@@ -40,6 +40,7 @@ export const RegisterLabel = styled.label`
   letter-spacing: 0.04em;
   color: #9b9faa;
 `;
+
 export const RegisterInput = styled.input`
   background: transparent;
   outline: none;
