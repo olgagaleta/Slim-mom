@@ -9,7 +9,9 @@ export const momsTheme = {
 
   colorTextPrimary: 'rgba(0, 0, 0, 0.87)',
   colorTextSecondary: 'rgba(0, 0, 0, 0.6)',
-  colorBackgroundDefault:'#fff',
+  colorBackgroundDefault: '#fff',
+  
+  // whiteTheme: true,
 };
 
 export const darkTheme = {
@@ -26,5 +28,6 @@ export const darkTheme = {
 
   colorTextPrimary: '#fff',
   colorTextSecondary: 'rgba(255, 255, 255, 0.7)',
-  colorBackgroundDefault:'#121212',
+  colorBackgroundDefault: '#121212',
+  // darkTheme: true,
 };

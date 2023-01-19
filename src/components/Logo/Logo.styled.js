@@ -65,4 +65,5 @@ export const LogoName = styled.div`
 export const LogoNameAcent = styled.span`
   color: #fc842d;
 `;
-export const LogoNameText = styled.span``;
+export const LogoNameText = styled.span`
+color: ${p=> p.theme.color.colorTextPrimary}`;

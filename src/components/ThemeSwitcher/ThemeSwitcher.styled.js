@@ -19,11 +19,11 @@ export const ThemeLight = styled.span`
   text-transform: capitalize;
   /* color: #fc842d; */
   color: ${p =>
-      p.theme.gradient
+      !p.theme.gradient
         ? `
-        #white 
+        #9b9faa 
       )`
-        : 'fff'};
+        : 'white'};
 `;
 export const ThemeDark = styled.span`
   font-family: ' Jost ', sans-serif;
