@@ -56,7 +56,8 @@ export const Title = styled.h2`
   line-height: 17px;
   letter-spacing: 0.04em;
 
-  color: #212121;
+  /* color: #212121; */
+ color: ${p => p.theme.colorTextPrimary};
 
   @media screen and (min-width: 1280px) {
     margin-bottom: 38px;

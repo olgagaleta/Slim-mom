@@ -46,7 +46,8 @@ export const Text = styled.p`
 
   margin: 40px 0 50px;
 
-  color: #212121;
+  /* color: #212121; */
+  color: ${p => p.theme.colorTextPrimary};
 
   @media ${breakpoints.minTablet} {
     width: 286px;
@@ -56,7 +57,8 @@ export const Text = styled.p`
 
     line-height: 20px;
 
-    color: #212121;
+    /* color: #212121; */
+    color: ${p => p.theme.colorTextPrimary};
   }
   @media ${breakpoints.desktop} {
     height: 280px;

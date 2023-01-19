@@ -11,7 +11,7 @@ import {
   LogoLink,
   LogoName,
   LogoNameAcent,
-  LogoNameText,
+  // LogoNameText,
 } from './Logo.styled';
 import { useSelector } from 'react-redux';
 import { selectSlimDaddy } from 'redux/slimDaddy/selectors.slimDaddy';
@@ -41,7 +41,8 @@ export default function Logo({ onClick, isAuth, isOnHome, userId }) {
         </picture>
       </ImageThumb>
       <LogoName isDaddy={isDaddy} isAuth={isAuth} isOnHome={isOnHome}>
-        <LogoNameText>Slim</LogoNameText>
+        {/* <LogoNameText>Slim</LogoNameText> */}
+        <span>Slim</span>
         {/* <LogoNameAcent>{isDaddy ? 'Daddy' : 'Mom'}</LogoNameAcent> */}
         <LogoNameAcent>{'Mom'}</LogoNameAcent>
       </LogoName>

@@ -32,7 +32,8 @@ export const ProductName = styled.p`
   line-height: 17px;
   letter-spacing: 0.04em;
 
-  color: #212121;
+  /* color: #212121; */
+  color: ${p => p.theme.colorTextPrimary};
 
   @media ${breakpoints.minTablet} {
     min-width: 240px;
@@ -41,7 +42,8 @@ export const ProductName = styled.p`
 
     line-height: 20px;
 
-    color: #212121;
+    /* color: #212121; */
+    color: ${p => p.theme.colorTextPrimary};
   }
   @media ${breakpoints.desktop} {
     min-height: 40px;
@@ -62,7 +64,8 @@ export const Weight = styled.span`
   text-align: center;
   letter-spacing: 0.04em;
 
-  color: #212121;
+  /* color: #212121; */
+  color: ${p => p.theme.colorTextPrimary};
 
   @media ${breakpoints.minTablet} {
     width: 106px;
@@ -90,7 +93,8 @@ export const Kcal = styled.span`
   text-align: center;
   letter-spacing: 0.04em;
 
-  color: #212121;
+  /* color: #212121; */
+  color: ${p => p.theme.colorTextPrimary};
 
   @media ${breakpoints.minTablet} {
     width: 106px;
