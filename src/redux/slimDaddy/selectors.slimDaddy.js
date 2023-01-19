@@ -1,1 +1,1 @@
-export const selectSlimDaddy = state => state.slimDaddy.slimDaddy;
+export const selectDarkTheme = state => state.darkTheme.darkTheme;

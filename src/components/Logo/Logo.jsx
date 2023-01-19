@@ -14,10 +14,10 @@ import {
   // LogoNameText,
 } from './Logo.styled';
 import { useSelector } from 'react-redux';
-import { selectSlimDaddy } from 'redux/slimDaddy/selectors.slimDaddy';
+import { selectDarkTheme } from 'redux/slimDaddy/selectors.slimDaddy';
 
 export default function Logo({ onClick, isAuth, isOnHome, userId }) {
-  const isDaddy = useSelector(selectSlimDaddy);
+  const isDark = useSelector(selectDarkTheme);
 
   return (
     <LogoLink onClick={onClick} to={isAuth ? `/${userId}/diary` : '/home'}>
@@ -35,15 +35,15 @@ export default function Logo({ onClick, isAuth, isOnHome, userId }) {
           />
           <LogoImage
             src={LogoDeskImage}
-            // src={isDaddy ? LogoDaddy : LogoDeskImage}
+            // src={isDark ? LogoDaddy : LogoDeskImage}
             alt="Company logo"
           />
         </picture>
       </ImageThumb>
-      <LogoName isDaddy={isDaddy} isAuth={isAuth} isOnHome={isOnHome}>
+      <LogoName isDark={isDark} isAuth={isAuth} isOnHome={isOnHome}>
         {/* <LogoNameText>Slim</LogoNameText> */}
         <span>Slim</span>
-        {/* <LogoNameAcent>{isDaddy ? 'Daddy' : 'Mom'}</LogoNameAcent> */}
+        {/* <LogoNameAcent>{isDark ? 'Daddy' : 'Mom'}</LogoNameAcent> */}
         <LogoNameAcent>{'Mom'}</LogoNameAcent>
       </LogoName>
     </LogoLink>

@@ -1,15 +1,15 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { initialState } from './initialState.slimDaddy';
 
-export const slimDaddy = createSlice({
-  name: 'slimDaddySlice',
+export const darkTheme = createSlice({
+  name: 'darkThemeSlice',
   initialState,
   reducers: {
     changeTheme: (state, actions) => {
-      state.slimDaddy = !state.slimDaddy;
+      state.darkTheme = !state.darkTheme;
     },
   },
 });
 
-export const slimDaddyReduser = slimDaddy.reducer;
-export const { changeTheme } = slimDaddy.actions;
+export const darkThemeReduser = darkTheme.reducer;
+export const { changeTheme } = darkTheme.actions;

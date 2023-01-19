@@ -1,3 +1,4 @@
 export const initialState = {
-  slimDaddy: false,
+  // slimDaddy: false,
+  darkTheme: false,
 };

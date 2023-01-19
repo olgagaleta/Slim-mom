@@ -42,7 +42,7 @@ export const LogoName = styled.div`
 
   @media ${breakpoints.desktop} {
     position: absolute;
-    left: ${p => (p.isDaddy ? '42px' : '60px')};
+    /* left: ${p => (p.isDark ? '42px' : '60px')}; */
 
     bottom: -2px;
 

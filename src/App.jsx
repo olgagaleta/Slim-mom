@@ -17,7 +17,7 @@ import {
   selectUserId,
 } from 'redux/auth/selectors.auth';
 import PublicRoute from 'components/PublicRoute/PublicRoute';
-import { selectSlimDaddy } from 'redux/slimDaddy/selectors.slimDaddy';
+import { selectDarkTheme } from 'redux/slimDaddy/selectors.slimDaddy';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, momsTheme } from './services/theme/theme';
 
@@ -33,14 +33,10 @@ export const App = () => {
   const userId = useSelector(selectUserId);
   const errorMesage = useSelector(selectError);
   const isFetched = useSelector(selectIsFetched);
-  const isDaddy = useSelector(selectSlimDaddy);
+  const isDark = useSelector(selectDarkTheme);
 
   const dispatch = useDispatch();
   errorMesage && toast.warn(errorMesage);
-
-  // useEffect(() => {
-  //   document.title = isDaddy ? 'Slim Daddy' : 'Slim Mom';
-  // }, [isDaddy]);
 
   useEffect(() => {
     dispatch(refreshUserThunk());
@@ -48,7 +44,7 @@ export const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuth]);
   return (
-    <ThemeProvider theme={isDaddy ? darkTheme : momsTheme}>
+    <ThemeProvider theme={isDark ? darkTheme : momsTheme}>
       <Background isAuth={isAuth}>
         <Header />
 
