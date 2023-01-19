@@ -19,7 +19,7 @@ import {
 import PublicRoute from 'components/PublicRoute/PublicRoute';
 import { selectSlimDaddy } from 'redux/slimDaddy/selectors.slimDaddy';
 import { ThemeProvider } from 'styled-components';
-import { momsTheme, daddyTheme } from 'services/theme/theme';
+import { darkTheme, momsTheme } from './services/theme/theme';
 
 const User = lazy(() => import('pages/User'));
 const Home = lazy(() => import('pages/Home'));
@@ -38,9 +38,9 @@ export const App = () => {
   const dispatch = useDispatch();
   errorMesage && toast.warn(errorMesage);
 
-  useEffect(() => {
-    document.title = isDaddy ? 'Slim Daddy' : 'Slim Mom';
-  }, [isDaddy]);
+  // useEffect(() => {
+  //   document.title = isDaddy ? 'Slim Daddy' : 'Slim Mom';
+  // }, [isDaddy]);
 
   useEffect(() => {
     dispatch(refreshUserThunk());
@@ -48,7 +48,7 @@ export const App = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuth]);
   return (
-    <ThemeProvider theme={isDaddy ? daddyTheme : momsTheme}>
+    <ThemeProvider theme={isDaddy ? darkTheme : momsTheme}>
       <Background isAuth={isAuth}>
         <Header />
 

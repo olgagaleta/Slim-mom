@@ -3,7 +3,7 @@ import LogoMobImage from 'helpers/logo/logoMobile.png';
 import LogoMobImageX from 'helpers/logo/logoMobile@2x.png';
 import LogoDeskImage from 'helpers/logo/logoDesk.png';
 import LogoDeskImageX from 'helpers/logo/logoDesk@2x.png';
-import LogoDaddy from 'helpers/logo/logoDaddy.png';
+// import LogoDaddy from 'helpers/logo/logoDaddy.png';
 
 import {
   ImageThumb,
@@ -34,14 +34,16 @@ export default function Logo({ onClick, isAuth, isOnHome, userId }) {
             type="image/png"
           />
           <LogoImage
-            src={isDaddy ? LogoDaddy : LogoDeskImage}
+            src={LogoDeskImage}
+            // src={isDaddy ? LogoDaddy : LogoDeskImage}
             alt="Company logo"
           />
         </picture>
       </ImageThumb>
       <LogoName isDaddy={isDaddy} isAuth={isAuth} isOnHome={isOnHome}>
         <LogoNameText>Slim</LogoNameText>
-        <LogoNameAcent>{isDaddy ? 'Daddy' : 'Mom'}</LogoNameAcent>
+        {/* <LogoNameAcent>{isDaddy ? 'Daddy' : 'Mom'}</LogoNameAcent> */}
+        <LogoNameAcent>{'Mom'}</LogoNameAcent>
       </LogoName>
     </LogoLink>
   );

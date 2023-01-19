@@ -13,8 +13,8 @@ export const UserPage = styled.section`
       : `linear-gradient(
         180deg,
         rgba(22,	81,	129, 0.3) 48%,
-        #165181 48%
-      )`};
+        #rgba(0, 0, 0, 0.1) 48%
+        )`};
 
   @media ${breakpoints.minTablet} {
     background: ${p =>
@@ -27,8 +27,8 @@ export const UserPage = styled.section`
         : `linear-gradient(
         180deg,
         rgba(22,	81,	129, 0.3) 60%,
-        #165181 60%
-      )`};
+        #rgba(0, 0, 0, 0.1) 60%
+        )`};
   }
 
   @media ${breakpoints.desktop} {
