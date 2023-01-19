@@ -1,6 +1,4 @@
-import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
-import { PersistGate } from 'redux-persist/integration/react';
 import {
   persistStore,
   persistReducer,
@@ -31,7 +29,7 @@ const persistDarkTheme = {
 
 const persistedDarkTheme = persistReducer(persistDarkTheme, darkThemeReduser);
 
-const store = configureStore({
+export const store = configureStore({
   reducer: {
     auth: persistedAuth,
     darkTheme: persistedDarkTheme,
@@ -45,14 +43,4 @@ const store = configureStore({
   devTools: true,
 });
 
-const persistor = persistStore(store);
-
-export default function ReduxProvider({ children }) {
-  return (
-    <Provider store={store}>
-      <PersistGate loading={null} persistor={persistor}>
-        {children}
-      </PersistGate>
-    </Provider>
-  );
-}
+export const persistor = persistStore(store);
