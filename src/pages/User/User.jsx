@@ -8,7 +8,7 @@ import APIs from 'services/API/API';
 import { toast } from 'react-toastify';
 import Loader from 'components/Loader';
 import { useSelector } from 'react-redux';
-import { selectSlimDaddy } from 'redux/slimDaddy/selectors.slimDaddy';
+import { selectDarkTheme } from 'redux/darkTheme/selectors.darkTheme';
 
 const TODAY = new Date().toLocaleDateString('en-CA');
 
@@ -20,7 +20,7 @@ export default function User() {
     .replaceAll('/', '.');
 
   const { userId } = useParams();
-  const isDaddy = useSelector(selectSlimDaddy);
+  const isDark = useSelector(selectDarkTheme);
 
   const usersParams = JSON.parse(window.localStorage.getItem('userParams'));
 
@@ -56,7 +56,7 @@ export default function User() {
     );
   }, []);
   return (
-    <UserPage isDaddy={isDaddy}>
+    <UserPage isDark={isDark}>
       <Container>
         {userData?.notAllowedProducts ? (
           <UserWrapper>

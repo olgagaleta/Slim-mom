@@ -42,7 +42,7 @@ export const LogoName = styled.div`
 
   @media ${breakpoints.desktop} {
     position: absolute;
-    left: ${p => (p.isDaddy ? '42px' : '60px')};
+    /* left: ${p => (p.isDark ? '42px' : '60px')}; */
 
     bottom: -2px;
 
@@ -64,6 +64,12 @@ export const LogoName = styled.div`
 `;
 export const LogoNameAcent = styled.span`
   color: #fc842d;
+
+  .span {
+    color: ${p => p.theme.color.colorTextPrimary},
+  }
 `;
-export const LogoNameText = styled.span`
-color: ${p=> p.theme.color.colorTextPrimary}`;
+// export const LogoNameText = styled.span`
+// /* color: ${p => p.theme.color.colorTextPrimary}, */
+// color:'red',
+// `;

@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { changeTheme } from 'redux/slimDaddy/slice.slimDaddy';
+import { changeTheme } from 'redux/darkTheme/slice.darkTheme';
 import {
   InputSwitcher,
   LabelSwitcher,
