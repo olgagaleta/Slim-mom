@@ -1,11 +1,20 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { initialState } from './initialState.auth';
 import {
   logInThunk,
   logOutThunk,
   refreshUserThunk,
   signUpThunk,
 } from './thunk.auth';
+
+export const initialState = {
+  user: {},
+  isAuth: false,
+  isFetched: true,
+  token: '',
+  refreshToken: '',
+  sid: '',
+  error: '',
+};
 
 export const authSlice = createSlice({
   name: 'authSlice',
