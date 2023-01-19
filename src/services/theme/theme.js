@@ -23,8 +23,10 @@ export const darkTheme = {
   calendarColor: '#165196',
   gradient: false,
   
-  color: '#121212',
+  // color: '#121212',
+  color:'#424242',
   sideBarColor: 'rgba(0, 0, 0, 0.1)',
+
 
   colorTextPrimary: '#fff',
   colorTextSecondary: 'rgba(255, 255, 255, 0.7)',
