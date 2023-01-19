@@ -42,7 +42,7 @@ export const HeaderNavigation = styled.nav`
     padding: 50px 0 0 0;
     justify-content: start;
     align-items: flex-end;
-    gap: 137px;
+    gap: 60px;
     z-index: 2;
   }
 `;
@@ -56,7 +56,7 @@ export const HeaderList = styled.ul`
   }
   @media ${breakpoints.desktop} {
     gap: ${p => {
-      return p.isAuth ? '480px' : '16px';
+      return p.isAuth ? '520px' : '16px';
     }};
     display: ${p => {
       return !p.isAuth && p.isOnHome !== '/home' && 'none';
