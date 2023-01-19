@@ -27,7 +27,7 @@ export const ProductNameInp = styled.input`
   border: none;
   border-bottom: 1px solid #e0e0e0;
   outline: ${p =>
-    !p.errorState ? 'none' : ' 3px ridge rgba(255, 99, 71, 0.8)'};
+    !p.errorState ? 'none' : ' 3px ridge rgba(255, 99, 71, 0.8)'}; 
   border-radius: 4px;
 
   @media ${breakpoints.minTablet} {

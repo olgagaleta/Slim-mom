@@ -10,6 +10,8 @@ export const momsTheme = {
   colorTextPrimary: 'rgba(0, 0, 0, 0.87)',
   colorTextSecondary: 'rgba(0, 0, 0, 0.6)',
   colorBackgroundDefault: '#fff',
+
+  colorTextWhite: '#121212',
   
 };
 
@@ -17,7 +19,7 @@ export const darkTheme = {
   modalColor: '#165181',
   modalTextColor: 'white',
   modalBorderColor: '#165181',
-  calendarColor: '#165196',
+  calendarColor: '#f0f0f0',
   gradient: false,
 
   color:'#424242',
@@ -26,4 +28,6 @@ export const darkTheme = {
   colorTextPrimary: '#fff',
   colorTextSecondary: 'rgba(255, 255, 255, 0.7)',
   colorBackgroundDefault: '#121212',
+
+  colorTextWhite: '#fff',
 };

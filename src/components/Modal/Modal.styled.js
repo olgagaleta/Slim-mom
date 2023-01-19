@@ -42,7 +42,7 @@ export const ModalWindow = styled.div`
   height: 100%;
 
   padding: 40px 20px 119px;
-  background-color: ${p => p.theme.modalColor};
+  background-color: ${p => p.theme.color};
   box-shadow: 0px 22px 40px rgba(0, 0, 0, 0.1);
 
   @media (min-width: 768px) {
@@ -74,7 +74,8 @@ export const ModalTitle = styled.h2`
   font-size: 18px;
   line-height: 1.44;
 
-  color: #212121;
+  color: ${p => p.theme.colorTextPrimary};
+
 
   margin-bottom: 40px;
 
@@ -98,6 +99,7 @@ export const Callories = styled.span`
   letter-spacing: 0.04em;
 
   color: ${p => p.theme.modalTextColor};
+ 
 
   margin-bottom: 20px;
 
@@ -132,7 +134,8 @@ export const FoodTitle = styled.p`
   line-height: 1.21;
   letter-spacing: 0.04em;
 
-  color: #212121;
+
+  color: ${p => p.theme.colorTextPrimary};
 
   margin-bottom: 15px;
 
@@ -170,7 +173,7 @@ export const FoodText = styled.ol`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #264061;
+    background-color: ${p => (p.theme.gradient ? '#264061' : '#9b9faa')};
   }
 
   @media (min-width: 768px) {

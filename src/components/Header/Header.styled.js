@@ -56,7 +56,7 @@ export const HeaderList = styled.ul`
   }
   @media ${breakpoints.desktop} {
     gap: ${p => {
-      return p.isAuth ? '520px' : '16px';
+      return p.isAuth ? '480px' : '16px';
     }};
     display: ${p => {
       return !p.isAuth && p.isOnHome !== '/home' && 'none';
@@ -84,7 +84,7 @@ export const HeaderNavLink = styled(NavLink)`
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 13px;
   line-height: 16px;
   text-align: right;
   letter-spacing: 0.04em;
@@ -92,9 +92,25 @@ export const HeaderNavLink = styled(NavLink)`
 
   color: #212121;
   transition: color linear 250ms;
+  margin-left: 15px;
 
   :hover,
   :focus {
     color: #212121;
   }
+
+  @media ${breakpoints.desktop} {
+    font-size: 18px;
+  }
+  @media screen and (min-width: 768px) {
+     margin-left: 20px;
+  }
+`;
+
+export const HeaderNavList = styled.span`
+  @media screen and (min-width: 468px) {
+    display: flex;
+    flex-direction: row;
+  }
+
 `;

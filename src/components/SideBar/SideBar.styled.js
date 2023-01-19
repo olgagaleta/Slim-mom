@@ -56,7 +56,6 @@ export const Title = styled.h2`
   line-height: 17px;
   letter-spacing: 0.04em;
 
-  /* color: #212121; */
  color: ${p => p.theme.colorTextPrimary};
 
   @media screen and (min-width: 1280px) {
@@ -120,7 +119,10 @@ export const ProductList = styled.ul`
     background: #e2e2e2;
   }
 
-  &::-webkit-scrollbar-thumb {
+  /* &::-webkit-scrollbar-thumb {
     background-color: #264061;
-  }
+  } */
+  &::-webkit-scrollbar-thumb {
+    background-color: ${p => (p.theme.gradient ? '#264061' : '#9b9faa')};
+  } 
 `;

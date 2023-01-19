@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+
 export const RegisterBtn = styled.button`
   margin-left: auto;
   margin-right: auto;
@@ -21,6 +22,7 @@ export const RegisterBtn = styled.button`
     color: #fc842d;
     background-color: #fff;
   }
+
   @media screen and (min-width: 768px) {
     margin: 0;
     margin-left: 32px;

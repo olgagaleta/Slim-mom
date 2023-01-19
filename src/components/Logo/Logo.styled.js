@@ -1,6 +1,7 @@
 import { breakpoints } from 'helpers/breakpoints';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
+
 export const LogoLink = styled(Link)`
   display: flex;
   align-items: center;
@@ -27,22 +28,23 @@ export const LogoImage = styled.img`
   height: auto;
 `;
 export const LogoName = styled.div`
-  display: none;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
   font-weight: 300;
-  font-size: 22px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 20px;
   letter-spacing: 0.08em;
   color: #212121;
 
   @media ${breakpoints.minTablet} {
     display: block;
+    font-size: 21px;
   }
 
   @media ${breakpoints.desktop} {
     position: absolute;
-    /* left: ${p => (p.isDark ? '42px' : '60px')}; */
+    font-size: 22px;
+    line-height: 26px;
 
     bottom: -2px;
 
@@ -64,12 +66,9 @@ export const LogoName = styled.div`
 `;
 export const LogoNameAcent = styled.span`
   color: #fc842d;
-
-  .span {
-    color: ${p => p.theme.color.colorTextPrimary},
-  }
 `;
-// export const LogoNameText = styled.span`
-// /* color: ${p => p.theme.color.colorTextPrimary}, */
-// color:'red',
-// `;
+
+export const LogoNameText = styled.span`
+  color: #fc842d;
+  color: ${p => p.theme.colorTextPrimary};
+`;
