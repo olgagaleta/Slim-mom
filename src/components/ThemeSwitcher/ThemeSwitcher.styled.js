@@ -17,7 +17,13 @@ export const ThemeLight = styled.span`
   font-size: 18px;
   line-height: 26px;
   text-transform: capitalize;
-  color: #fc842d;
+  /* color: #fc842d; */
+  color: ${p =>
+      p.theme.gradient
+        ? `
+        #white 
+      )`
+        : 'fff'};
 `;
 export const ThemeDark = styled.span`
   font-family: ' Jost ', sans-serif;
@@ -27,7 +33,14 @@ export const ThemeDark = styled.span`
   font-size: 18px;
   line-height: 26px;
   text-transform: capitalize;
-  color: #9b9faa;
+  /* color: #9b9faa; */
+  color: ${p =>
+      p.theme.gradient
+        ? `
+        #fff 
+      )`
+        : 'white'};
+
 `;
 export const LabelSwitcher = styled.label`
   display: inline-block;
