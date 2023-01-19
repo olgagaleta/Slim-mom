@@ -35,7 +35,6 @@ export const DateString = styled.p`
     line-height: 49px;
   }
 
-  /* color: #212121; */
   color: ${p => p.theme.colorTextPrimary}; 
 
 
@@ -54,7 +53,8 @@ export const MyCalendar = styled(Calendar)`
   transform: translateY(25%);
 
   &.react-calendar {
-    background: ${p => p.theme.modalColor};
+    background: white;
+
     border-radius: 4px;
     overflow: hidden;
   }

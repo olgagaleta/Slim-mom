@@ -10,7 +10,7 @@ import {
   LogoLink,
   LogoName,
   LogoNameAcent,
-  // LogoNameText,
+  LogoNameText,
 } from './Logo.styled';
 import { useSelector } from 'react-redux';
 import { selectDarkTheme } from 'redux/darkTheme/selectors.darkTheme';
@@ -36,8 +36,7 @@ export default function Logo({ onClick, isAuth, isOnHome, userId }) {
         </picture>
       </ImageThumb>
       <LogoName isDark={isDark} isAuth={isAuth} isOnHome={isOnHome}>
-        {/* <LogoNameText>Slim</LogoNameText> */}
-        <span>Slim</span>
+        <LogoNameText>Slim</LogoNameText>
         <LogoNameAcent>{'Mom'}</LogoNameAcent>
       </LogoName>
     </LogoLink>

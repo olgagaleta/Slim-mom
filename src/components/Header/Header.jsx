@@ -18,6 +18,7 @@ import {
   HeaderNavLink,
   HeaderWrapper,
   PageHeader,
+  HeaderNavList,
 } from './Header.styled';
 
 export default function Header() {
@@ -68,14 +69,17 @@ export default function Header() {
             <HeaderList isAuth={isAuth} isOnHome={location.pathname}>
               {!isAuth ? (
                 <>
-                  <div>
-                    <HeaderNavLink to="/login">Sign in</HeaderNavLink>
-                  </div>
-                  <div>
-                    <HeaderNavLink to="/registration">
-                      Registration
-                    </HeaderNavLink>
-                  </div>
+                  <HeaderNavList>
+                    <div>
+                      <HeaderNavLink to="/login">Sign in</HeaderNavLink>
+                    </div>
+                    <div>
+                      <HeaderNavLink to="/registration">
+                        Registration
+                      </HeaderNavLink>
+                    </div>
+                  </HeaderNavList>
+
                   <HeaderWrapper>
                     <ThemeSwitcher />
                   </HeaderWrapper>

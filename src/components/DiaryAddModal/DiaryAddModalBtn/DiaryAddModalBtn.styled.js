@@ -37,8 +37,8 @@ export const AddBtn = styled.button`
   :hover,
   :focus {
     background-color: ${p => p.theme.color};
-    stroke: ${p => p.theme.modalBorderColor};
-    border: 1px solid ${p => p.theme.modalBorderColor};
+    stroke: ${p => (p.theme.gradient ? '#fc842d' : 'white')};
+     border: 1px solid ${p => (p.theme.gradient ? '#fc842d' : 'white')};
     box-shadow: none;
   }
 

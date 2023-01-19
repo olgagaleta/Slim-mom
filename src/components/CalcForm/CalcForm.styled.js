@@ -25,7 +25,7 @@ export const Thumb = styled.div`
 
 export const Title = styled.h1`
   font-size: 18px;
-  color: rgba(33, 33, 33, 1);
+  color: ${p => p.theme.colorTextWhite};
 
   @media (min-width: 768px) {
     font-size: 34px;

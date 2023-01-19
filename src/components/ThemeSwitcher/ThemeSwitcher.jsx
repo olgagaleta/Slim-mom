@@ -15,6 +15,7 @@ export default function ThemeSwitcher() {
   const switchTheme = () => {
     dispatch(changeTheme());
   };
+
   return (
     <Switcher>
       <ThemeLight>light</ThemeLight>
