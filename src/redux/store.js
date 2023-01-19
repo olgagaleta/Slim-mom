@@ -14,7 +14,7 @@ import {
 import storage from 'redux-persist/lib/storage';
 
 import { authReduser } from './auth/slice.auth';
-import { darkThemeReduser } from './slimDaddy/slice.slimDaddy';
+import { darkThemeReduser } from './darkTheme/slice.darkTheme';
 
 const persistConfigAuth = {
   key: 'auth',

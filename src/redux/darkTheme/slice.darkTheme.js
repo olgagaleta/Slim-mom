@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { initialState } from './initialState.slimDaddy';
+import { initialState } from './initialState.darkTheme';
 
 export const darkTheme = createSlice({
   name: 'darkThemeSlice',

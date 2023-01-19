@@ -17,7 +17,7 @@ import {
   selectUserId,
 } from 'redux/auth/selectors.auth';
 import PublicRoute from 'components/PublicRoute/PublicRoute';
-import { selectDarkTheme } from 'redux/slimDaddy/selectors.slimDaddy';
+import { selectDarkTheme } from 'redux/darkTheme/selectors.darkTheme';
 import { ThemeProvider } from 'styled-components';
 import { darkTheme, momsTheme } from './services/theme/theme';
 

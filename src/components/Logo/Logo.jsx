@@ -14,7 +14,7 @@ import {
   // LogoNameText,
 } from './Logo.styled';
 import { useSelector } from 'react-redux';
-import { selectDarkTheme } from 'redux/slimDaddy/selectors.slimDaddy';
+import { selectDarkTheme } from 'redux/darkTheme/selectors.darkTheme';
 
 export default function Logo({ onClick, isAuth, isOnHome, userId }) {
   const isDark = useSelector(selectDarkTheme);

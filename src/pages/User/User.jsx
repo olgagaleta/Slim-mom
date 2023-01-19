@@ -8,7 +8,7 @@ import APIs from 'services/API/API';
 import { toast } from 'react-toastify';
 import Loader from 'components/Loader';
 import { useSelector } from 'react-redux';
-import { selectDarkTheme } from 'redux/slimDaddy/selectors.slimDaddy';
+import { selectDarkTheme } from 'redux/darkTheme/selectors.darkTheme';
 
 const TODAY = new Date().toLocaleDateString('en-CA');
 
