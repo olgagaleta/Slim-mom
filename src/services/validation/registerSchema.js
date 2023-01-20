@@ -5,10 +5,13 @@ export const registerSchema = yup
       .string()
       .matches(
         /^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$/,
-        "Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+        'Your name can not include any symbols.'
       )
       .required(),
     email: yup.string().email().required(),
-    password: yup.string().min(8).required(),
+    password: yup
+      .string()
+      .min(8, 'Your password can not be less then 8 symbols')
+      .required(),
   })
   .required();

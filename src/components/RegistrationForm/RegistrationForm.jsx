@@ -13,7 +13,6 @@ import {
   RegisterTitle,
 } from './RegistrationForm.styled';
 import { toast } from 'react-toastify';
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function RegistrationForm() {
@@ -40,10 +39,6 @@ export default function RegistrationForm() {
   };
 
   const { username, email, password } = errors;
-  const errorMessage = username?.message || email?.message || password?.message;
-  useEffect(() => {
-    toast.error(errorMessage);
-  }, [errorMessage]);
 
   return (
     <>
@@ -58,6 +53,7 @@ export default function RegistrationForm() {
             required
             type="text"
           />
+          {username && toast.error(username.message)}
         </RegisterLabel>
         <RegisterLabel htmlFor="email">
           Email *
@@ -68,6 +64,7 @@ export default function RegistrationForm() {
             name="email"
             type="email"
           />
+          {email && toast.error(email.message)}
         </RegisterLabel>
         <RegisterLabel htmlFor="password">
           Password *
@@ -78,6 +75,7 @@ export default function RegistrationForm() {
             name="password"
             type="password"
           />
+          {password && toast.error(password.message)}
         </RegisterLabel>
         <ContainerBtn>
           <LoginLink to="/login">Login</LoginLink>
