@@ -7,7 +7,7 @@ export const BurgerOverlay = styled.div`
   z-index: 1000;
   min-width: 320px;
   width: 100%;
-  min-height: 130vh;
+  min-height: 140vh;
   background: #264061;
   text-align: center;
   overflow:hidden;
