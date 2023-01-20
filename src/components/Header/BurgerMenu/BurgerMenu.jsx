@@ -8,8 +8,12 @@ import {
 } from './BurgerMenu.styled';
 
 export default function BurgerMenu({ onClick, userId }) {
+  const handleBackdropClick = event => {
+    if (event.currentTarget === event.target) onClick();
+  };
+
   return (
-    <BurgerOverlay>
+    <BurgerOverlay onClick={handleBackdropClick}>
       <BurgerList>
         <BurgerItem>
           <ThemeSwitcher />
