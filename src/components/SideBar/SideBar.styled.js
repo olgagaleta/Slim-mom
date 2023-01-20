@@ -23,14 +23,16 @@ export const AsideBox = styled.aside`
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 80px 88px;
+    /* padding: 80px 88px; */
+    margin-left: auto;
+    margin-right: auto;
     background-image: url(${leaves});
     background-repeat: no-repeat;
     background-position: top -180;
   }
 
   @media ${breakpoints.desktop} {
-    margin: 0 -32px;
+    margin: 0 -16px;
     background: ${p => p.theme.sideBarColor};
 
     margin-left: auto;

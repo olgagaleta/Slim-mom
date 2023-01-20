@@ -43,6 +43,7 @@ export const App = () => {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isAuth]);
+
   return (
     <ThemeProvider theme={isDark ? darkTheme : momsTheme}>
       <Background isAuth={isAuth}>
