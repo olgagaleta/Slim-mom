@@ -20,7 +20,7 @@ export const ListProducts = styled.ul`
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #264061;
+    background-color: ${p => (p.theme.gradient ? '#264061' : '#9b9faa')};
   }
 
   @media ${breakpoints.minTablet} {
