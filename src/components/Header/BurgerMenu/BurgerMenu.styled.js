@@ -1,4 +1,4 @@
-// import { breakpoints } from 'helpers/breakpoints';
+import { breakpoints } from 'helpers/breakpoints';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -8,9 +8,25 @@ export const BurgerOverlay = styled.div`
   min-width: 320px;
   width: 100%;
   min-height: 140vh;
-  background: #264061;
+  background: ${p => (p.theme.gradient ? '#264061' : '#424242')};
   text-align: center;
-  overflow:hidden;
+  overflow: hidden;
+
+  position: relative;
+  ::before {
+    content: '';
+    left: 0px;
+    top: 0px;
+    position: absolute;
+    height: ${p => (p.theme.gradient ? '0px' : '2px')};
+    min-width: 320px;
+    width: 100%;
+    background-color: #e0e0e0;
+
+    @media ${breakpoints.desktop} {
+      display: none;
+    }
+  }
 `;
 
 export const BurgerList = styled.ul``;
