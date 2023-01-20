@@ -22,6 +22,7 @@ export const Gradient = styled.div`
 
   @media ${breakpoints.minTablet} {
     display: block;
+    /* display: none; */
     position: absolute;
 
     left: 0;
