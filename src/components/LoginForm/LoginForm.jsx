@@ -13,7 +13,6 @@ import {
 } from './LoginForm.styled';
 import { loginSchema } from 'services/validation/loginSchema';
 import { toast } from 'react-toastify';
-import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export default function LoginForm() {
@@ -39,11 +38,7 @@ export default function LoginForm() {
   };
 
   const { email, password } = errors;
-  const errorMessage = email?.message || password?.message;
 
-  useEffect(() => {
-    toast.error(errorMessage);
-  }, [errorMessage]);
   return (
     <>
       <AuthForm onSubmit={handleSubmit(onSubmit)}>
@@ -57,6 +52,7 @@ export default function LoginForm() {
             name="email"
             type="email"
           />
+          {email && toast.error(email.message)}
         </AuthLabel>
         <AuthLabel htmlFor="password">
           Password *
@@ -67,6 +63,7 @@ export default function LoginForm() {
             name="password"
             type="password"
           />
+          {password && toast.error(password.message)}
         </AuthLabel>
         <ContainerBtn>
           <LoginBtn />

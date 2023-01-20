@@ -1,7 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { useOutletContext } from 'react-router-dom';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import {
   BloodTitle,
   Button,
@@ -78,19 +78,7 @@ export default function CalcForm() {
     }
   };
 
-  const { height, age, weight, desiredWeight, bloodType } = errors;
-  const errorMessage =
-    height?.message ||
-    age?.message ||
-    weight?.message ||
-    desiredWeight?.message ||
-    bloodType?.message;
-
-  useEffect(() => {
-    toast.dismiss();
-    toast.info(errorMessage);
-  }, [errorMessage]);
-
+  const { height, age, weight, desiredWeight } = errors;
   return (
     <Thumb>
       <Title>Calculate your daily calorie intake right now</Title>
@@ -98,28 +86,32 @@ export default function CalcForm() {
         <LabelFirst>
           <FormLabel htmlFor="height">
             Height *
-            <TextInp id={'height'} {...register('height')} />
-            <span className="tooltiptext">min. 100, max. 250</span>
+            <TextInp id={'height'} {...register('height')} type="number" />
+            {height && toast.error(height.message)}
           </FormLabel>
 
           <FormLabel htmlFor="age">
             Age *
-            <TextInp id={'age'} {...register('age')} />
-            <span className="tooltiptext">min. 18, max. 100</span>
+            <TextInp id={'age'} {...register('age')} type="number" />
+            {age && toast.error(age.message)}
           </FormLabel>
 
           <FormLabel htmlFor="weight">
             Current weight *
-            <TextInp id={'weight'} {...register('weight')} />
-            <span className="tooltiptext">min. 20, max. 500</span>
+            <TextInp id={'weight'} {...register('weight')} type="number" />
+            {weight && toast.error(weight.message)}
           </FormLabel>
         </LabelFirst>
 
         <LabelFirst>
           <FormLabel htmlFor="desiredWeight">
             Desired weight *
-            <TextInp id={'desiredWeight'} {...register('desiredWeight')} />
-            <span className="tooltiptext">min. 20, max. 500</span>
+            <TextInp
+              id={'desiredWeight'}
+              {...register('desiredWeight')}
+              type="number"
+            />
+            {desiredWeight && toast.error(desiredWeight.message)}
           </FormLabel>
 
           <FormLabel htmlFor="bloodType">
