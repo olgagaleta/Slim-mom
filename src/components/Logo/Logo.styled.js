@@ -71,4 +71,8 @@ export const LogoNameAcent = styled.span`
 export const LogoNameText = styled.span`
   color: #fc842d;
   color: ${p => p.theme.colorTextPrimary};
+
+  @media ${breakpoints.desktop} {
+    margin-left: 75px;
+  }
 `;
