@@ -135,7 +135,7 @@ export const DateString = styled.p`
     line-height: 49px;
   }
 
-  color: #212121;
+  color: ${p => p.theme.colorTextPrimary};
 
   animation-name: ${p => (p.state === 'pending' ? animation : 'none')};
   animation-duration: 1000ms;
