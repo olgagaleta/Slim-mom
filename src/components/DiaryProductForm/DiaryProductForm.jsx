@@ -32,7 +32,7 @@ export default function DiaryProductForm({
 
   const handleChange = async e => {
     const search = e.target.value;
-    const isAlreadyHere = products?.find(p => p.title.ru === search);
+    const isAlreadyHere = products?.find(p => p.title.ua === search);
     setQuerry(search);
     setErrorState(null);
 
@@ -52,7 +52,7 @@ export default function DiaryProductForm({
   };
 
   const onSubmit = async ({ title, weight }) => {
-    const isDisabled = products.find(product => product.title.ru === title);
+    const isDisabled = products.find(product => product.title.ua === title);
     setState('pending');
     setErrorState(null);
     if (isDisabled) {
@@ -105,7 +105,7 @@ export default function DiaryProductForm({
         {products.map(product => (
           <option
             key={product._id}
-            value={product.title.ru}
+            value={product.title.ua}
             product-id={product._id}
           >
             Caloricity: {product.calories} kKal / 100g
