@@ -24,7 +24,8 @@ export default function RegistrationForm() {
     formState: { errors },
     reset,
   } = useForm({
-    mode: 'onBlur',
+    // mode: 'onBlur',
+    mode: 'onSubmit',
     resolver: yupResolver(registerSchema),
   });
 

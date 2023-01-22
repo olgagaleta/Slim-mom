@@ -23,7 +23,8 @@ export default function LoginForm() {
     formState: { errors },
     reset,
   } = useForm({
-    mode: 'onBlur',
+    // mode: 'onBlur',
+    mode: 'onSubmit',
     resolver: yupResolver(loginSchema),
   });
 
